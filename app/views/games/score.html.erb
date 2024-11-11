@@ -1,0 +1,13 @@
+<h1>This is the score</h1>
+
+<% if @on_the_grid  %>
+  <% if @english %>
+  <p>Congratulations!!!!!!! Your <%= @word_input %> is a valid English word!</p>
+  <% else %>
+  <p>Sorry but <%= @word_input %> does not seem to be a valid English word..</p>
+  <% end %>
+<% else %>
+  <p>Sorry but <%= @word_input %> can't be built out of <%= @letters %> </p>
+<% end %>
+
+<%= link_to 'Play again', new_path %>
